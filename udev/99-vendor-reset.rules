@@ -104,6 +104,8 @@ ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1002", ATTR{device}=="0x66a7",
 
 ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1002", ATTR{device}=="0x66af", RUN+="/bin/sh -c '/sbin/modprobe vendor-reset; echo device_specific > /sys$env{DEVPATH}/reset_method'"
 
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1002", ATTR{device}=="0x1638", RUN+="/bin/sh -c '/sbin/modprobe vendor-reset; echo device_specific > /sys$env{DEVPATH}/reset_method'"
+
 ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1002", ATTR{device}=="0x7310", RUN+="/bin/sh -c '/sbin/modprobe vendor-reset; echo device_specific > /sys$env{DEVPATH}/reset_method'"
 
 ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1002", ATTR{device}=="0x7312", RUN+="/bin/sh -c '/sbin/modprobe vendor-reset; echo device_specific > /sys$env{DEVPATH}/reset_method'"
